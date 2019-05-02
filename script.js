@@ -240,17 +240,6 @@ $('.retry-button').click(function() {
 
 });
 
-// Minimize sidebar
-$('.x').click(function() {
-
-
-    minimize('.sidebar', '.x');
-
-});
-
-$('.sidebar').click(function() {
-    maximize('.sidebar', '.x');
-});
 
 
 
