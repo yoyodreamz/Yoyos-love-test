@@ -2,11 +2,12 @@ body {
     background-image: url('https://i.imgur.com/bNdzo5f.jpg');
     background-size: cover;
     margin: 0 auto;
+    background-repeat: no-repeat;
 }
 
-.inDepth{
-font-family: 'Raleway', sans-serif;
-    
+.inDepth {
+    font-family: 'Raleway', sans-serif;
+
 }
 
 
@@ -111,12 +112,6 @@ h3 {
     overflow-wrap: break-word;
     display: block;
     margin: auto;
-}
-
-.x {
-    width: 20px;
-    position: absolute;
-    left: 110px;
 }
 
 a {
