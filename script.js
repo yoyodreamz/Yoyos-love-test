@@ -153,6 +153,9 @@ $('.okay-button').click(function() {
 
     p1name = $('.p1input').val();
     p2name = $('.p2input').val();
+    p1name = p1name.toLowerCase();
+    p2name = p2name.toLowerCase();
+    
 
     iconIf('kyle', 'https://i.imgur.com/0sDDfMh.png');
     iconIf('tamiyo', 'https://i.imgur.com/tmrVxXn.png');
@@ -169,6 +172,7 @@ $('.okay-button').click(function() {
     bgColor('nick', 'yellow');
     bgColor('jamie', '#ffb744');
     bgColor('casey', 'cyan');
+    
 
 
 
@@ -221,8 +225,8 @@ $('.retry-button').click(function() {
     $('.okay-button').show();
     $('.retry-button').hide();
 
-    $('.person1').attr("src", 'https://i.imgur.com/F4B7KC5.png');
-    $('.person2').attr("src", 'https://i.imgur.com/ixDjfSq.png');
+    $('.person1').attr("src", 'https://i.imgur.com/wKWi6JN.png');
+    $('.person2').attr("src", 'https://i.imgur.com/wKWi6JN.png');
 
 
 
