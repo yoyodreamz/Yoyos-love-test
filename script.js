@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+    
 $('.inDepth').hide();
 
 var p1name = '';
@@ -287,3 +289,5 @@ function titlebar(val) {
 }
 
 titlebar(0);
+
+    });
