@@ -1,3 +1,5 @@
+$('.inDepth').hide();
+
 var p1name = '';
 var p2name = '';
 
