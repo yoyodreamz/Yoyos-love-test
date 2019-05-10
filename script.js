@@ -3,7 +3,7 @@ $( document ).ready(function() {
 var p1name = '';
 var p2name = '';
 
-var clicks = 0;
+
 var percent = 0;
 var results = 0;
 
@@ -25,20 +25,8 @@ var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey"];
 // Other characters if functions 
 
 
-// Minimize function
 
-function minimize(target, pic) {
-    $(pic).html('<img class="x" src="https://i.redd.it/5zkf7lq8z5v01.png">');
-    $(target).css('height', '200');
 
-}
-
-// Maximize function
-
-function maximize(target) {
-    $(target).html('<img class="x" src="https://backgroundcheckall.com/wp-content/uploads/2018/10/letter-x-transparent-background-2.png">');
-    $(target).css('height', '20');
-}
 
 // 𝐑𝐞𝐚𝐜𝐭𝐢𝐨𝐧 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧
 function reaction() {
@@ -89,7 +77,7 @@ function giveResults(number) {
     $('.startIn-depth').show();
     $('h3').text(p1name + ' and ' + p2name + ' eh?');
     $('html, body').animate({
-        scrollTop: 900
+        scrollTop: 350
     }, 1000);
     $('.startIn-depth').animate({
         opacity: "1"
@@ -142,10 +130,6 @@ function iconIf(name, link) {
 $('.startIn-depth').hide();
 $('.retry-button').hide();
 
-// Clicks Variable
-$('.x').click(function() {
-    clicks = clicks + 1;
-});
 
 // Start Click handlers
 
@@ -157,7 +141,7 @@ $('.okay-button').click(function() {
     p2name = $('.p2input').val();
     p1name = p1name.toLowerCase();
     p2name = p2name.toLowerCase();
-    
+
 
     iconIf('kyle', 'https://i.imgur.com/0sDDfMh.png');
     iconIf('tamiyo', 'https://i.imgur.com/tmrVxXn.png');
@@ -174,7 +158,7 @@ $('.okay-button').click(function() {
     bgColor('nick', 'yellow');
     bgColor('jamie', '#ffb744');
     bgColor('casey', 'cyan');
-    
+
 
 
 
@@ -234,14 +218,14 @@ $('.retry-button').click(function() {
 
     $('html, body').animate({
         scrollTop: 0
-    }, 1000);
+    }, 2000);
     $('.startIn-depth').animate({
         opacity: "0"
     });
     setTimeout(
         function() {
             $('.startIn-depth').hide();
-        }, 1000);
+        }, 2000);
 
 
 });
