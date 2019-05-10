@@ -117,3 +117,9 @@ a {
     text-decoration: none;
     color: #5c00e8;
 }
+
+.notes {
+ color: white;
+ text-align: center;
+ font-family: 'Raleway', sans-serif;
+}
