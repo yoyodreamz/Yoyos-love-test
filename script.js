@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+    
 var p1name = '';
 var p2name = '';
 
@@ -305,3 +307,5 @@ function titlebar(val) {
 }
 
 titlebar(0);
+    
+});
