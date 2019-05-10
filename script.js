@@ -14,7 +14,7 @@ var vanessaIcon = $('');
 var jamieIcon = $('');
 var caseyIcon = $('');
 
-var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey"];
+var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey", "taki"];
 
 // Start other people's character's arrays / variables
 
