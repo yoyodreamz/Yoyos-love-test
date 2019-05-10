@@ -152,6 +152,7 @@ $('.okay-button').click(function() {
     iconIf('nick', 'https://i.imgur.com/Y7QnNYY.png');
     iconIf('casey', 'https://i.imgur.com/9UCXC6W.png');
     iconIf('jamie', 'https://i.imgur.com/yE1cjgd.png');
+    iconIf ('taki', 'https://i.imgur.com/ogyFa3W.png');
 
     // if statement for background colors LMAO
 
@@ -161,6 +162,7 @@ $('.okay-button').click(function() {
     bgColor('nick', 'yellow');
     bgColor('jamie', '#ffb744');
     bgColor('casey', 'cyan');
+    bgColor('taki', 'green');
 
 
 
