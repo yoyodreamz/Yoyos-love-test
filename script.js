@@ -267,7 +267,9 @@ $('.notes').hide();
         function() {
             $('.startIn-depth').hide();
         }, 2000);
+$('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
 
+});
 
 });
 
