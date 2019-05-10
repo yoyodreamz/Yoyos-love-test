@@ -1,5 +1,3 @@
-$( document ).ready(function() {
-
 var p1name = '';
 var p2name = '';
 
@@ -7,12 +5,6 @@ var p2name = '';
 var percent = 0;
 var results = 0;
 
-var tamiyoIcon = $('');
-var kyleIcon = $('');
-var nickIcon = $('');
-var vanessaIcon = $('');
-var jamieIcon = $('');
-var caseyIcon = $('');
 
 var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey", "taki"];
 
@@ -152,7 +144,7 @@ $('.okay-button').click(function() {
     iconIf('nick', 'https://i.imgur.com/Y7QnNYY.png');
     iconIf('casey', 'https://i.imgur.com/9UCXC6W.png');
     iconIf('jamie', 'https://i.imgur.com/yE1cjgd.png');
-    iconIf ('taki', 'https://i.imgur.com/ogyFa3W.png');
+    iconIf('taki', 'https://i.imgur.com/ogyFa3W.png');
 
     // if statement for background colors LMAO
 
@@ -255,7 +247,7 @@ $('.retry-button').click(function() {
     $('.person1').attr("src", 'https://i.imgur.com/wKWi6JN.png');
     $('.person2').attr("src", 'https://i.imgur.com/wKWi6JN.png');
 
-$('.notes').hide();
+    $('.notes').hide();
 
     $('html, body').animate({
         scrollTop: 0
@@ -267,9 +259,8 @@ $('.notes').hide();
         function() {
             $('.startIn-depth').hide();
         }, 2000);
-$('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
 
-});
+$('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
 
 });
 
@@ -314,5 +305,3 @@ function titlebar(val) {
 }
 
 titlebar(0);
-    
-    });
