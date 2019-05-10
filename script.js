@@ -77,7 +77,7 @@ function giveResults(number) {
     $('.startIn-depth').show();
     $('h3').text(p1name + ' and ' + p2name + ' eh?');
     $('html, body').animate({
-        scrollTop: 350
+        scrollTop: 450
     }, 1000);
     $('.startIn-depth').animate({
         opacity: "1"
@@ -87,6 +87,8 @@ function giveResults(number) {
     reaction();
 
 }
+
+
 
 
 function bgColor(name, color) {
@@ -129,6 +131,7 @@ function iconIf(name, link) {
 // Start Other
 $('.startIn-depth').hide();
 $('.retry-button').hide();
+$('.notes').hide();
 
 
 // Start Click handlers
@@ -191,12 +194,48 @@ $('.okay-button').click(function() {
         giveResults(results);
 
 
-
-
     } else if ((p1name === 'casey') && (p2name === 'tamiyo') || (p1name === 'tamiyo') && (p2name === 'casey')) {
         results = 70;
         giveResults(results);
 
+        // 𝟲𝟬
+    } else if ((p1name === 'taki') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'taki')) {
+        results = 69;
+        giveResults(results);
+
+    } else if ((p1name === 'taki') && (p2name === 'jamie') || (p1name === 'jamie') && (p2name === 'taki')) {
+        results = 65;
+        giveResults(results);
+
+        // 𝟓𝟎  
+    } else if ((p1name === 'tamiyo') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'tamiyo')) {
+        results = 50;
+        giveResults(results);
+        $('.notes').show();
+        $('.notes').text('Without their history, they would get along pretty well');
+        // 𝟯𝟬
+    } else if ((p1name === 'nick') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'nick')) {
+        results = 32;
+        giveResults(results);
+
+        // 𝟐𝟎
+
+    } else if ((p1name === 'taki') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'taki')) {
+        results = 28;
+        giveResults(results);
+
+    } else if ((p1name === 'jamie') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'jamie')) {
+        results = 20.5;
+        giveResults(results);
+
+        // 𝙐𝙉𝘿𝙀𝙍
+    } else if ((p1name === 'casey') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'casey')) {
+        results = 1;
+        giveResults(results);
+
+    } else if (((p1name === 'taki') && (p2name === 'tamiyo') || (p1name === 'tamiyo') && (p2name === 'taki')) || ((p1name === 'taki') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'taki')) || ((p1name === 'casey') && (p2name === 'taki') || (p1name === 'taki') && (p2name === 'casey')) || ((p1name === 'casey') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'casey')) || ((p1name === 'jamie') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'jamie')) || ((p1name === 'jamie') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'jamie')) || ((p1name === 'jamie') && (p2name === 'casey') || (p1name === 'casey') && (p2name === 'jamie'))) {
+        results = 0;
+        giveResults(results);
     } else {
         results = Math.floor(Math.random() * 100);
         giveResults(results);
@@ -214,7 +253,7 @@ $('.retry-button').click(function() {
     $('.person1').attr("src", 'https://i.imgur.com/wKWi6JN.png');
     $('.person2').attr("src", 'https://i.imgur.com/wKWi6JN.png');
 
-
+$('.notes').hide();
 
     $('html, body').animate({
         scrollTop: 0
