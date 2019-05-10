@@ -4191,6 +4191,12 @@ h3 {
 a {
     text-decoration: none;
     color: #5c00e8;
+}
+
+.notes {
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
 }</style></head>
 
 
@@ -4282,6 +4288,10 @@ a {
             <br>
             <br>
             <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
             <h1 class="results"></h1>
             <h3></h3>
@@ -4312,7 +4322,7 @@ a {
 
         <br>
 
-
+        <p class="notes"></p>
 
     
 
@@ -4322,18 +4332,12 @@ a {
 var p1name = '';
 var p2name = '';
 
-var clicks = 0;
+
 var percent = 0;
 var results = 0;
 
-var tamiyoIcon = $('');
-var kyleIcon = $('');
-var nickIcon = $('');
-var vanessaIcon = $('');
-var jamieIcon = $('');
-var caseyIcon = $('');
 
-var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey"];
+var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey", "taki"];
 
 // Start other people's character's arrays / variables
 
@@ -4344,20 +4348,8 @@ var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey"];
 // Other characters if functions 
 
 
-// Minimize function
 
-function minimize(target, pic) {
-    $(pic).html('<img class="x" src="https://i.redd.it/5zkf7lq8z5v01.png">');
-    $(target).css('height', '200');
 
-}
-
-// Maximize function
-
-function maximize(target) {
-    $(target).html('<img class="x" src="https://backgroundcheckall.com/wp-content/uploads/2018/10/letter-x-transparent-background-2.png">');
-    $(target).css('height', '20');
-}
 
 // 𝐑𝐞𝐚𝐜𝐭𝐢𝐨𝐧 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧
 function reaction() {
@@ -4408,7 +4400,7 @@ function giveResults(number) {
     $('.startIn-depth').show();
     $('h3').text(p1name + ' and ' + p2name + ' eh?');
     $('html, body').animate({
-        scrollTop: 900
+        scrollTop: 450
     }, 1000);
     $('.startIn-depth').animate({
         opacity: "1"
@@ -4418,6 +4410,8 @@ function giveResults(number) {
     reaction();
 
 }
+
+
 
 
 function bgColor(name, color) {
@@ -4460,11 +4454,8 @@ function iconIf(name, link) {
 // Start Other
 $('.startIn-depth').hide();
 $('.retry-button').hide();
+$('.notes').hide();
 
-// Clicks Variable
-$('.x').click(function() {
-    clicks = clicks + 1;
-});
 
 // Start Click handlers
 
@@ -4476,7 +4467,7 @@ $('.okay-button').click(function() {
     p2name = $('.p2input').val();
     p1name = p1name.toLowerCase();
     p2name = p2name.toLowerCase();
-    
+
 
     iconIf('kyle', 'https://i.imgur.com/0sDDfMh.png');
     iconIf('tamiyo', 'https://i.imgur.com/tmrVxXn.png');
@@ -4484,6 +4475,7 @@ $('.okay-button').click(function() {
     iconIf('nick', 'https://i.imgur.com/Y7QnNYY.png');
     iconIf('casey', 'https://i.imgur.com/9UCXC6W.png');
     iconIf('jamie', 'https://i.imgur.com/yE1cjgd.png');
+    iconIf('taki', 'https://i.imgur.com/ogyFa3W.png');
 
     // if statement for background colors LMAO
 
@@ -4493,7 +4485,8 @@ $('.okay-button').click(function() {
     bgColor('nick', 'yellow');
     bgColor('jamie', '#ffb744');
     bgColor('casey', 'cyan');
-    
+    bgColor('taki', 'green');
+
 
 
 
@@ -4526,12 +4519,48 @@ $('.okay-button').click(function() {
         giveResults(results);
 
 
-
-
     } else if ((p1name === 'casey') && (p2name === 'tamiyo') || (p1name === 'tamiyo') && (p2name === 'casey')) {
         results = 70;
         giveResults(results);
 
+        // 𝟲𝟬
+    } else if ((p1name === 'taki') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'taki')) {
+        results = 69;
+        giveResults(results);
+
+    } else if ((p1name === 'taki') && (p2name === 'jamie') || (p1name === 'jamie') && (p2name === 'taki')) {
+        results = 65;
+        giveResults(results);
+
+        // 𝟓𝟎  
+    } else if ((p1name === 'tamiyo') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'tamiyo')) {
+        results = 50;
+        giveResults(results);
+        $('.notes').show();
+        $('.notes').text('Without their history, they would get along pretty well');
+        // 𝟯𝟬
+    } else if ((p1name === 'nick') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'nick')) {
+        results = 32;
+        giveResults(results);
+
+        // 𝟐𝟎
+
+    } else if ((p1name === 'taki') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'taki')) {
+        results = 28;
+        giveResults(results);
+
+    } else if ((p1name === 'jamie') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'jamie')) {
+        results = 20.5;
+        giveResults(results);
+
+        // 𝙐𝙉𝘿𝙀𝙍
+    } else if ((p1name === 'casey') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'casey')) {
+        results = 1;
+        giveResults(results);
+
+    } else if (((p1name === 'taki') && (p2name === 'tamiyo') || (p1name === 'tamiyo') && (p2name === 'taki')) || ((p1name === 'taki') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'taki')) || ((p1name === 'casey') && (p2name === 'taki') || (p1name === 'taki') && (p2name === 'casey')) || ((p1name === 'casey') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'casey')) || ((p1name === 'jamie') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'jamie')) || ((p1name === 'jamie') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'jamie')) || ((p1name === 'jamie') && (p2name === 'casey') || (p1name === 'casey') && (p2name === 'jamie'))) {
+        results = 0;
+        giveResults(results);
     } else {
         results = Math.floor(Math.random() * 100);
         giveResults(results);
@@ -4549,19 +4578,20 @@ $('.retry-button').click(function() {
     $('.person1').attr("src", 'https://i.imgur.com/wKWi6JN.png');
     $('.person2').attr("src", 'https://i.imgur.com/wKWi6JN.png');
 
-
+    $('.notes').hide();
 
     $('html, body').animate({
         scrollTop: 0
-    }, 1000);
+    }, 2000);
     $('.startIn-depth').animate({
         opacity: "0"
     });
     setTimeout(
         function() {
             $('.startIn-depth').hide();
-        }, 1000);
+        }, 2000);
 
+$('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
 
 });
 
