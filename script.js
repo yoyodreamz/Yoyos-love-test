@@ -1,12 +1,16 @@
 $( document ).ready(function() {
     
-var p1name = '';
-var p2name = '';
+var p1name = $('.p1input').val();
+var p2name = $('.p2input').val();
 
 
 var percent = 0;
 var results = 0;
 
+var past = [];
+var PN = 0;
+var current = [];
+var CN = 0;
 
 var myCharacters = ["tamiyo", "kyle", "nick", "vanessa", "jamie", "casey", "taki"];
 
@@ -140,12 +144,12 @@ $('.okay-button').click(function() {
     p2name = p2name.toLowerCase();
 
 
-    iconIf('kyle', 'https://i.imgur.com/0sDDfMh.png');
+    iconIf('kyle', 'https://i.imgur.com/xQswxdN.png');
     iconIf('tamiyo', 'https://i.imgur.com/tmrVxXn.png');
-    iconIf('vanessa', 'https://i.imgur.com/FIt9f6l.png');
+    iconIf('vanessa', 'https://i.imgur.com/eb7GNrJ.png');
     iconIf('nick', 'https://i.imgur.com/Y7QnNYY.png');
     iconIf('casey', 'https://i.imgur.com/9UCXC6W.png');
-    iconIf('jamie', 'https://i.imgur.com/yE1cjgd.png');
+    iconIf('jamie', 'https://i.imgur.com/yFcUFbH.png');
     iconIf('taki', 'https://i.imgur.com/ogyFa3W.png');
 
     // if statement for background colors LMAO
@@ -161,13 +165,13 @@ $('.okay-button').click(function() {
 
 
 
-    // 𝒔𝒕𝒂𝒕𝒆𝒎𝒆𝒏𝒕 𝒇𝒐𝒓 𝒓𝒆𝒔𝒖𝒍𝒕𝒔
-    // 𝟏𝟎𝟎
-    if ((p1name === 'tamiyo') && (p2name === 'jamie') || (p1name === 'jamie') && (p2name === 'tamiyo') || (p1name === 'vanessa') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'vanessa')) {
-        results = 100;
-        giveResults(results);
-        // 𝟗𝟎
-    } else if ((p1name === 'tamiyo') && (p2name === 'jamie')) {
+        // 𝒔𝒕𝒂𝒕𝒆𝒎𝒆𝒏𝒕 𝒇𝒐𝒓 𝒓𝒆𝒔𝒖𝒍𝒕𝒔
+        // 𝟏𝟎𝟎
+        if ((p1name === 'tamiyo') && (p2name === 'jamie') || (p1name === 'jamie') && (p2name === 'tamiyo') || (p1name === 'vanessa') && (p2name === 'kyle') || (p1name === 'kyle') && (p2name === 'vanessa')) {
+            results = 100;
+            giveResults(results);
+            // 𝟗𝟎
+        } else if ((p1name === 'tamiyo') && (p2name === 'jamie')) {
 
         // 𝟖𝟎
     } else if ((p1name === 'kyle') && (p2name === 'tamiyo') || (p1name === 'tamiyo') && (p2name === 'kyle')) {
@@ -219,6 +223,8 @@ $('.okay-button').click(function() {
     } else if ((p1name === 'taki') && (p2name === 'nick') || (p1name === 'nick') && (p2name === 'taki')) {
         results = 28;
         giveResults(results);
+        $('.notes').show();
+        $('.notes').text('Strictly friend relationship');
 
     } else if ((p1name === 'jamie') && (p2name === 'vanessa') || (p1name === 'vanessa') && (p2name === 'jamie')) {
         results = 20.5;
@@ -237,6 +243,15 @@ $('.okay-button').click(function() {
         giveResults(results);
 
 
+    }
+    
+    current = [p1name, p2name];
+    CN = results;
+
+    
+    if (current === past){
+     results = PN;   
+     giveResults(results);
     }
 
 });
@@ -262,7 +277,11 @@ $('.retry-button').click(function() {
             $('.startIn-depth').hide();
         }, 2000);
 
-$('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
+    $('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
+    
+    past = current;
+    PN = CN;
+
 
 });
 
