@@ -76,7 +76,7 @@ function giveResults(number) {
     $('h3').text(p1name + ' and ' + p2name + ' eh?');
     $('html, body').animate({
         scrollTop: 450
-    }, 1000);
+    }, 690);
     $('.startIn-depth').animate({
         opacity: "1"
     });
