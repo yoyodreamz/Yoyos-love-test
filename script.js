@@ -268,14 +268,14 @@ $('.retry-button').click(function() {
 
     $('html, body').animate({
         scrollTop: 0
-    }, 2000);
+    }, 700);
     $('.startIn-depth').animate({
         opacity: "0"
     });
     setTimeout(
         function() {
             $('.startIn-depth').hide();
-        }, 2000);
+        }, 700);
 
     $('.inDepth').html("<br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br>  SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD <br> SSKDKSDKDSKKSDKSKDKSD");
     
